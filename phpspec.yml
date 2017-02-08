@@ -1,5 +1,0 @@
-suites:
-    main:
-        namespace: ccti
-        psr4_prefix: ccti
-        src_path: app
