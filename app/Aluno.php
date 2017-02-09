@@ -3,6 +3,7 @@
 use Illuminate\Database\Eloquent\Model;
 use ccti\Turma;
 use ccti\AlunoTurma;
+use ccti\Pessoa;
 
 class Aluno extends Model {
 
@@ -10,11 +11,16 @@ class Aluno extends Model {
 	public $timestamps = true;
 	
 	public $fillable = array(
-			'nome', 'email', 'cpf', 'rg', 'dataNascimento', 'grauInstrucao');
+			'pessoa_id', 'email', 'escolaridade');
 
 	protected $guarded = ['id'];
 
+	public function pessoa() {
+		return $this->belongsTo('ccti\Pessoa');
+	}
+
 	public function turmas(){
-		return $this->belongsToMany('ccti\Turma','alunos_turmas')->withPivot('numero_inscricao', 'turma_id', 'data_inscricao', 'situacao');		
+		return $this->belongsToMany('ccti\Turma','alunos_turmas')->withPivot('numero_inscricao', 'turma_id', 'data_inscricao', 'situacao', 'concluido');		
 	}
 }
+ 
