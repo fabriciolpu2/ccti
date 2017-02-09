@@ -10,10 +10,10 @@ class AlunoNovaTabela extends Migration {
 		Schema::create('alunos', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('pessoa_id');
-			$table->string('email');
-			$table->string('escolaridade');
-			$table->timestamps();
+			$table->integer('pessoa_id')->references('id')->on('pessoa')->onDelete('cascade');
+			$table->string('email')->nullable();
+			$table->string('escolaridade')->nullable();
+			$table->timestamps()->nullable();
 		});
 	}
 	

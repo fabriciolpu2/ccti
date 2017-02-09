@@ -31,7 +31,7 @@
                     <div class="huge" style="font-size: 15px">{{$turma->curso->nome}} [{{$turma->curso->categoria}}]</div>
                     <div>{{$turma->nome}}</div>
                     <div style="font-size: 10px"> {{$turma->data_inicio}} à {{$turma->data_fim}}</div>
-                    <div style="font-size: 15px"> {{$turma->curso->cargahoraria}}</div>
+                    <div style="font-size: 15px"> {{$turma->curso->cargahoraria}} Horas</div>
                   </div>
                 </div>
               </div>
@@ -62,7 +62,7 @@
                         <div class="huge" style="font-size: 15px">{{$turma->curso->nome}} [{{$turma->curso->categoria}}]</div>
                         <div>{{$turma->nome}}</div>
                         <div style="font-size: 10px"> {{$turma->data_inicio}} à {{$turma->data_fim}}</div>
-                        <div style="font-size: 15px"> {{$turma->curso->cargahoraria}}</div>
+                        <div style="font-size: 15px"> {{$turma->curso->cargahoraria}} Horas</div>
                       </div>
                     </div>
                   </div>

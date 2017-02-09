@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAlunoTurmasTable extends Migration {
+class CriarCurso extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,13 @@ class CreateAlunoTurmasTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('aluno_turmas', function(Blueprint $table)
+		Schema::create('cursos', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->increments('id');			
+			$table->string('nome')->nullable();
+			$table->string('categoria')->nullable();
+			$table->integer('vagas')->nullable();
+			$table->string('cargahoraria')->nullable();
 			$table->timestamps();
 		});
 	}
@@ -26,7 +30,7 @@ class CreateAlunoTurmasTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('aluno_turmas');
+		//
 	}
 
 }
