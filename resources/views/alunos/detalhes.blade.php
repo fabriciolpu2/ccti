@@ -8,6 +8,8 @@
         
         {{$aluno->pessoa->nome}}
         <img src="/upload/img/perfil/{{ $aluno->pessoa->foto }}" style="width: 150px; height: 150px; border-radius: 50%">
+        <BR>
+        <a href="/upload/{{ $aluno->pessoa->documento}}" download>Documentação</a>
                 
         </div>
         
@@ -33,6 +35,7 @@
                     <div>{{$turma->nome}}</div>
                     <div style="font-size: 10px"> {{$turma->data_inicio}} à {{$turma->data_fim}}</div>
                     <div style="font-size: 15px"> {{$turma->curso->cargahoraria}} Horas</div>
+
                   </div>
                 </div>
               </div>
