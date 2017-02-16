@@ -11,7 +11,7 @@ class Aluno extends Model {
 	public $timestamps = true;
 	
 	public $fillable = array(
-			'pessoa_id', 'email', 'escolaridade');
+			'pessoa_id', 'email', 'escolaridade', 'tel_celular', 'tel_residencial', 'tel_opcional');
 
 	protected $guarded = ['id'];
 
