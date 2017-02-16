@@ -9,6 +9,7 @@ use Request;
 use ccti\Aluno;
 use ccti\Turma;
 use ccti\Pessoa;
+use ccti\Endereco;
 
 use Image;
 
@@ -56,7 +57,11 @@ class AlunoController extends Controller {
 
 		$valores['documento'] = $nomeDocumento;
 		$valores['foto'] = $nomefoto;
-		$p = Pessoa::create($valores);
+
+		$endereco = Endereco::create($valores);
+		$valores['endereco_id'] = $endereco->id;
+
+		$p = Pessoa::create($valores, 'endereco_id');
 		$valores['pessoa_id'] = $p->id;
 		
 		Aluno::create($valores, 'pessoa_id');
