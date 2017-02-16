@@ -17,7 +17,7 @@ class LoginController extends Controller {
 		if (Auth::attempt($credenciais)){
 			return redirect('/alunos');
 		}
-		return 'usuário não existe';
+		return redirect('auth.login');
 
 	}
 }
