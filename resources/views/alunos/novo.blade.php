@@ -10,10 +10,11 @@
 						<div class="form-group">
 							<label>Nome</label>
 							<input name="nome" class="form-control" value="{{ old('nome')}}" />
-						</div>
-						<div class="form-group">
 							<label>cpf</label>
 							<input name="cpf" class="form-control" value="{{ old('cpf')}}" />
+						</div>
+						<div class="form-group">
+							
 						</div>
 						<div class="form-group">
 							<label>rg</label>
