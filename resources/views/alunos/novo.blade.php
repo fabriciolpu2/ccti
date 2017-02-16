@@ -26,15 +26,15 @@
 							<input name="ssp" class="form-control" value="{{ old('ssp')}}" />
 						</div>
 						<div class="col-xs-12 col-lg-2">
-							<label>nascimento</label>
+							<label>DATA DE NASCIMENTO</label>
 							<input name="nascimento" class="form-control" value="{{ old('nascimento')}}" />
 						</div>
 						<div class="col-xs-12 col-lg-2">
-							<label>nacionalidade</label>
+							<label>NACIONALIDADE</label>
 							<input name="nacionalidade" class="form-control" value="{{ old('nacionalidade')}}" />
 						</div>
 						<div class="col-xs-12 col-lg-2">
-							<label>naturalidade</label>
+							<label>NATURALIDADE</label>
 							<input name="naturalidade" class="form-control" value="{{ old('naturalidade')}}" />
 						</div>
 						<!-- ENDEREÇO -->
@@ -66,24 +66,25 @@
 
 
 
-						<div class="col-xs-12 col-lg-5">
-							<label>E-mail</label>
+						<div class="col-xs-12 col-lg-4">
+							<label>EMAIL</label>
 							<input name="email" class="form-control" value="{{ old('email')}}" />
 						</div>
 						<div class="col-xs-12 col-lg-2">
-							<label>Escolaridade</label>
+							<label>ESCOLARIDADE</label>
 							<input name="escolaridade" class="form-control" value="{{ old('escolaridade')}}" />
 						</div>
 
-						<div class="col-xs-12 col-lg-2">
-							<label>Foto</label>
+						<div class="col-xs-12 col-lg-5">
+							<label>FOTO</label>
 							<input type="file" name="foto"/>							
 						</div>
 					
 						<div class="col-xs-12 col-lg-2">
-							<label>Documento</label>
+							<label>DOCUMENTO</label>
 							<input type="file" name="documento">	
 						</div>
+						
 
 
 
