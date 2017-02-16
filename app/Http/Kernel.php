@@ -27,6 +27,7 @@ class Kernel extends HttpKernel {
 		'auth' => 'ccti\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'ccti\Http\Middleware\RedirectIfAuthenticated',
+		'autorizar' => 'ccti\Http\Middleware\Autorizador',
 	];
 
 }

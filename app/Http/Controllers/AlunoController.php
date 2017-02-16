@@ -14,6 +14,11 @@ use Image;
 
 class AlunoController extends Controller {
 
+	public function __construct()
+    {
+        $this->middleware('autorizar');
+    }	
+
 	public function listaJson(){
         $alunos = Aluno::all();
         return response()->json($alunos);        

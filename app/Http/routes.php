@@ -13,7 +13,7 @@
 //Route::get('/', 'WelcomeController@index');
 
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'LoginController@form');
 Route::get('home', 'HomeController@index');
 
 Route::controllers([
@@ -41,3 +41,7 @@ Route::post('/turmas/adiciona', 'TurmaController@adiciona');
 Route::get('/turmas/alunos/{id}','TurmaController@listaAlunos')->where('id','[0-9]+');
 Route::get('/turmas/{id}', 'CursoController@listaTurmas')->where('id', '[0-9]+');
 Route::get('/turmas','TurmaController@lista');
+
+/*autenticazão*/
+Route::get('/login', 'LoginController@form');
+Route::post('/login', 'LoginController@login');

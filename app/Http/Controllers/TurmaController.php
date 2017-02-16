@@ -10,6 +10,12 @@ use ccti\Curso;
 
 class TurmaController extends Controller {
 
+	public function __construct()
+    {
+        $this->middleware('autorizar');
+    }	
+
+
 	public function lista(){
 
 		$turmas = Turma::all();
