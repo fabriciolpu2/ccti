@@ -44,8 +44,13 @@
 							<input name="escolaridade" class="form-control" value="{{ old('escolaridade')}}" />
 						</div>
 						<div class="form-group">
-							<label>Documentos</label>
-							<input type="file" name="foto">
+							<label>Foto</label>
+							<input type="file" name="foto"/>
+							<label>Documento</label>
+							<input type="file" name="documento">
+						</div>
+						<div class="form-group">
+							
 						</div>
 
 

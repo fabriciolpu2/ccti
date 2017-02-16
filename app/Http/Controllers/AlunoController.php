@@ -40,14 +40,21 @@ class AlunoController extends Controller {
 		return view('alunos.detalhes')->with('aluno', $aluno)->with('turmas', $turmas);
 	}
 
-	public function add(\Illuminate\Http\Request $r) {
+	public function add() {
  		$valores = Request::all();
+ 		
+ 		$documento = Request::file('documento');
+ 		$destinationPath = public_path('/upload/');
+        $nomeDocumento = $documento->getClientOriginalName();
+        $documento->move($destinationPath, $nomeDocumento);
+        
 
-		$foto = $r->file('foto');
+        //Foto
+        $foto = Request::file('foto');
  		$nomefoto = $foto->getClientOriginalName();		
 		Image::make($foto)->save( public_path('/upload/img/perfil/' . $nomefoto ));
 
-		
+		$valores['documento'] = $nomeDocumento;
 		$valores['foto'] = $nomefoto;
 		$p = Pessoa::create($valores);
 		$valores['pessoa_id'] = $p->id;
