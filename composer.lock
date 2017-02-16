@@ -737,7 +737,11 @@
                 "sftp",
                 "storage"
             ],
+<<<<<<< HEAD
             "time": "2017-02-09 11:33:58"
+=======
+            "time": "2017-02-09T11:33:58+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "monolog/monolog",
@@ -1227,7 +1231,11 @@
                 "mail",
                 "mailer"
             ],
+<<<<<<< HEAD
             "time": "2017-02-13 07:52:53"
+=======
+            "time": "2017-02-13T07:52:53+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "symfony/console",
@@ -2786,7 +2794,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2017-02-06 05:18:07"
+=======
+            "time": "2017-02-06T05:18:07+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2906,7 +2918,11 @@
                 "compare",
                 "equality"
             ],
+<<<<<<< HEAD
             "time": "2017-01-29 09:50:25"
+=======
+            "time": "2017-01-29T09:50:25+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "sebastian/diff",
@@ -3269,7 +3285,11 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2017-01-21 17:06:35"
+=======
+            "time": "2017-01-21T17:06:35+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "webmozart/assert",
