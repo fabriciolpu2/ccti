@@ -4,10 +4,13 @@ use ccti\Http\Requests;
 use ccti\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 //use Illuminate\Http\Request;
+
 use Request;
 use ccti\Aluno;
 use ccti\Turma;
 use ccti\Pessoa;
+
+use Image;
 
 class AlunoController extends Controller {
 
@@ -32,8 +35,15 @@ class AlunoController extends Controller {
 		return view('alunos.detalhes')->with('aluno', $aluno)->with('turmas', $turmas);
 	}
 
-	public function add() {
+	public function add(\Illuminate\Http\Request $r) {
  		$valores = Request::all();
+
+		$foto = $r->file('foto');
+ 		$nomefoto = $foto->getClientOriginalName();		
+		Image::make($foto)->save( public_path('/upload/img/perfil/' . $nomefoto ));
+
+		
+		$valores['foto'] = $nomefoto;
 		$p = Pessoa::create($valores);
 		$valores['pessoa_id'] = $p->id;
 		

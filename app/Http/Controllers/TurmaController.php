@@ -22,7 +22,7 @@ class TurmaController extends Controller {
 
 		$alunos->turmas()->attach($turma);
 		*/
-		return view('turmas.listaalunos')->with('alunos', $alunos);
+		return view('alunos.')->with('alunos', $alunos);
 	}
 
 	public function novo(){

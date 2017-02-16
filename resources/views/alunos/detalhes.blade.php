@@ -7,6 +7,7 @@
         <div class="panel-body">
         
         {{$aluno->pessoa->nome}}
+        <img src="/upload/img/perfil/{{ $aluno->pessoa->foto }}" style="width: 150px; height: 150px; border-radius: 50%">
                 
         </div>
         

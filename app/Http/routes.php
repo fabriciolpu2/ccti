@@ -26,8 +26,8 @@ Route::controllers([
 Route::get('/alunos', 'AlunoController@lista');
 Route::get('/alunos/novo', 'AlunoController@novo');
 Route::post('/alunos/add', 'AlunoController@add');
-Route::get('/alunos/{id}', 'AlunoController@detalhes')->where('id', '[0-9]');
-Route::get('/alunos/turmas/{id}', 'AlunoController@listaTurmas')->where('id', '[0-9]');
+Route::get('/alunos/{id}', 'AlunoController@detalhes')->where('id', '[0-9]+');
+Route::get('/alunos/turmas/{id}', 'AlunoController@listaTurmas')->where('id', '[0-9]+');
 Route::get('/alunos/json', 'AlunoController@listaJson');
 
 /* Cursos */

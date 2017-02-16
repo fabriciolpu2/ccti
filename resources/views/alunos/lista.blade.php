@@ -17,10 +17,10 @@
 						
 						@foreach($alunos as $a)
 							<tr>
-								<td>{{$a->nome}}</td>
+								<td>{{$a->pessoa->nome}}</td>
 								<td>{{$a->email}}</td>
-								<td>{{$a->dataNascimento}}</td>
-								<td>{{$a->cpf}}</td>
+								<td>{{$a->pessoa->nascimento}}</td>
+								<td>{{$a->pessoa->cpf}}</td>
 								<td>
 									<a href="/alunos/{{$a->id}}">
 										<span class="glyphicon glyphicon-search" aria-hidden="true" />								

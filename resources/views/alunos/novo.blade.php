@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="row">
 				<div class="panel-body">					
-					<form action="/alunos/add" method="post">
+					<form action="/alunos/add" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 
 						<div class="form-group">
@@ -43,6 +43,13 @@
 							<label>Escolaridade</label>
 							<input name="escolaridade" class="form-control" value="{{ old('escolaridade')}}" />
 						</div>
+						<div class="form-group">
+							<label>Documentos</label>
+							<input type="file" name="foto">
+						</div>
+
+
+
 						<button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
 					</form>
 			

@@ -6,7 +6,7 @@ use ccti\Aluno;
 class Pessoa extends Model {
 
 	public $timestamps = true;
-	public $fillable = array('nome', 'cpf', 'rg', 'ssp','nascimento', 'nacionalidade', 'naturalidade');
+	public $fillable = array('nome', 'cpf', 'rg', 'ssp','nascimento', 'nacionalidade', 'naturalidade', 'foto');
 	protected $guarded = ['id'];
 
 	public function aluno(){
