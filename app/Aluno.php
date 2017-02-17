@@ -20,7 +20,7 @@ class Aluno extends Model {
 	}
 
 	public function turmas(){
-		return $this->belongsToMany('ccti\Turma','alunos_turmas')->withPivot('numero_inscricao', 'turma_id', 'data_inscricao', 'situacao', 'concluido');		
+		return $this->belongsToMany('ccti\Turma','alunos_turmas')->withPivot('numero_inscricao', 'turma_id', 'data_inscricao', 'situacao', 'concluido','observacao')->withTimestamps();		
 	}
 }
  

@@ -58,18 +58,33 @@ class AlunoController extends Controller {
 		$valores['documento'] = $nomeDocumento;
 		$valores['foto'] = $nomefoto;
 
+		//Endereco
 		$endereco = Endereco::create($valores);
 		$valores['endereco_id'] = $endereco->id;
 
+		//Pessoa
 		$p = Pessoa::create($valores, 'endereco_id');
 		$valores['pessoa_id'] = $p->id;
 		
-		Aluno::create($valores, 'pessoa_id');
+		//Aluno
+		//$turma = Request::input('turma_id');
+		$turma = $valores['turma_id'];
+		$situacao = $valores['situacao'];
+		$observacao = $valores['observacao'];
+		$data_inscricao = $data = date("d/m/Y"); 
+
+		$aluno = Aluno::create($valores, 'pessoa_id')->turmas()->attach($turma, array('data_inscricao'=>$data_inscricao, 'situacao'=>$situacao, 'observacao'=>$observacao));
+		
+		//$aluno->turmas()->attach($turma->id);
+
+
 
 		return redirect('/alunos')->withInput(Request::only('id'));
 	}
 	public function novo() {
-		return view('alunos.novo');
+		//Inscriçoes abertas
+		$turmas = Turma::where('inscricoes_abertas', 1)->get();
+		return view('alunos.novo')->with('turmas', $turmas);
 	}
 
 

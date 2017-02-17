@@ -9,8 +9,7 @@
 
 						<div class="panel panel-default">
   							<div class="panel-heading">Dados Pessoais</div>
-  							<div class="panel-body">
-
+  							<div class="panel-body">								
 								<div class="col-xs-12 col-lg-6">
 									<label for="nome">NOME</label>
 									<input name="nome" class="form-control" value="{{ old('nome')}}" />							
@@ -27,6 +26,8 @@
 									<label>SSP</label>
 									<input name="ssp" class="form-control" value="{{ old('ssp')}}" />
 								</div>
+							</div>
+							<div class="panel-body">
 								<div class="col-xs-12 col-lg-2">
 									<label>NASCIMENTO</label>
 									<input name="nascimento" class="form-control" value="{{ old('nascimento')}}" />
@@ -44,10 +45,7 @@
 									<input name="escolaridade" class="form-control" value="{{ old('escolaridade')}}" />
 								</div>
 							</div>
-						</div>
-						<div class="panel panel-default">
-  							<div class="panel-heading">Endereço</div>
-  							<div class="panel-body">
+							<div class="panel-body">
 
 								<div class="col-xs-12 col-lg-2">
 									<label>LOGRADOURO</label>
@@ -75,8 +73,6 @@
 								</div>	
 							</div>
 						</div>
-
-
 						<div class="panel panel-default">
   							<div class="panel-heading">Contato e Documentos</div>
   							<div class="panel-body">
@@ -113,11 +109,43 @@
 								</div>
 							</div>
 						</div>
-						
+						<div class="panel panel-default">
+  							<div class="panel-heading">Turmas</div>
+  							<div class="panel-body">
+
+								<div class="col-xs-12 col-lg-5">
+  									<label>Curso</label>
+									<select name="turma_id" class="form-control" value="{{ old('turma_id')}}">
+									@foreach($turmas as $t)
+										@if($t->inscricoes_abertas == 1)
+											<option value="{{$t->id}}">{{$t->nome}} - {{$t->turno}} - {{$t->qtd_inscritos}}</option>
+										@else
+											<option value="">Insdiponivel</option>
+										@endif
+									@endforeach
+
+									</select>
+  								</div>
+  								<div class="col-xs-12 col-lg-5">
+  									<label>Inscrição</label>
+  									<select name="situacao" class="form-control" value="{{ old('situacao')}}">
+  										<option value="CONFIRMADA">CONFIRMADA</option>
+  										<option value="DOC. PENDENDTE">DOC. PENDENDTE</option>
+  										<option value="CANCELADA">CANCELADA</option>
+  									</select>
+  								</div>
+  								<div class="col-xs-12 col-lg-12" style="margin-top: 20px">
+  									<label>Observação</label>
+  									<textarea name="observacao" class="form-control" rows="3"></textarea>
+  								</div>
+
+							</div>
+						</div>
 
 
 
 						<button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+						<BR><BR><BR>
 					</form>
 			
 	</div>
