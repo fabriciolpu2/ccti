@@ -7,6 +7,7 @@ use ccti\Aluno;
 
 class AlunoTurma extends Model {
 
+	//public $timetamps = false;
 	protected $table = 'alunos_turmas';
 
 	public function curso() {
